@@ -15,8 +15,8 @@ Named entity recognition for **Medieval Latin charters** with 19 fine-grained di
 | File | Purpose |
 |---|---|
 | `medieval_latin_ner.py` | Ready-to-use script / Python module: downloads the model and tags text (CLI, JSON, HTML output) |
-| `medieval_latin_ner_demo.ipynb` | Demo notebook: highlighted charter, entity tables, label statistics, threshold effect |
-| `PannHActa_1416_VIII_10_charter.txt` | Demo charter: Sigismund to Abbot Demetrius of Tihany, 1416 Aug 10 |
+| `medieval_latin_ner_demo.ipynb` | Notebook: highlighted charter, entity tables, label statistics, threshold effect |
+| `PannHActa_1416_VIII_10_charter.txt` | Charter: Sigismund to Abbot Demetrius of Tihany, 1416 Aug 10 |
 | `2026.nlp4dh-1.22.pdf` | The paper |
 
 ## Installation
@@ -101,7 +101,7 @@ hard-negative mining. Because of this custom architecture the standard `pipeline
 `MedievalLatinNER.predict()` splits long charters into overlapping windows (`window=150`, `overlap=40` tokens) and
 merges the results. This is necessary because the chunking in the repository's `span_ner_model.py` counts 512 *words*,
 while the XLM-R tokenizer truncates at 512 *subwords*: with the raw `SpanNERModel.predict()`, everything after roughly the
-first 250 words of a charter stays untagged. (The demo charter has 460 tokens: the raw call stopped at character 1818 of 3186.)
+first 250 words of a charter stays untagged. (The charter has 460 tokens: the raw call stopped at character 1818 of 3186.)
 
 ## Limitations
 
