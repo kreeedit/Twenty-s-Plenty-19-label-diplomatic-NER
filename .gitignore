@@ -1,0 +1,16 @@
+# Claude Code fájlok és napló (nem kerülhet ki pusholáskor)
+CLAUDE.md
+.claudesignore
+.claudeignore
+log.md
+.claude/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Környezetek, titkok
+venv/
+.venv/
+.env
