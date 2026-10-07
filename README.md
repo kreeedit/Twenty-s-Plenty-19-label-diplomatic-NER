@@ -1,6 +1,6 @@
 # Twenty's Plenty – Medieval Latin Span-NER
 
-Named entity recognition for **medieval Latin charters** with 19 fine-grained diplomatic entity types
+Named entity recognition for **Medieval Latin charters** with 19 fine-grained diplomatic entity types
 (persons, titles, places, institutions, legal clauses, dates, money, measures, ...).
 
 | | |
@@ -114,7 +114,7 @@ rare labels (`PROP`, `EST`, `TAX`, ...). Check the results before using them in 
 ```bibtex
 @inproceedings{kovacs2026twenty,
   title     = {Twenty's Plenty: Semantic Scaffolding and Span Architecture for 19-Label NER in Medieval Latin Charters},
-  author    = {Kov{\'a}cs, Tam{\'a}s and Consolo, Giuseppe and Vogeler, Georg},
+  author    = {Kovács, Tamás and Consolo, Giuseppe and Vogeler, Georg},
   booktitle = {Proceedings of the 6th International Conference on Natural Language Processing for the Digital Humanities},
   pages     = {236--241},
   year      = {2026}
@@ -122,7 +122,7 @@ rare labels (`PROP`, `EST`, `TAX`, ...). Check the results before using them in 
 
 @dataset{consolo2026ner,
   title     = {Named Entity Recognition Dataset for Medieval Latin Charters},
-  author    = {Consolo, Giuseppe and Kov{\'a}cs, Tam{\'a}s and Vogeler, Georg},
+  author    = {Consolo, Giuseppe and Kovács, Tamás and Vogeler, Georg},
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.19009431}
