@@ -59,17 +59,34 @@ By default entities may be **nested** (e.g. a `PER` inside an `ACTOR`), as in th
 ### Notebook
 
 ```bash
-jupyter notebook medieval_latin_ner_demo.ipynb
+jupyter notebook medieval_latin_ner_demo.ipynb   # spaCy-style highlighted charter, label table, statistics
 ```
 
 ## Labels
 
-`PER` person name · `ACTOR` full person noun phrase · `TITLE` rank/office · `REL` kinship · `LOC` place · `INS` religious institution ·
-`NAT` natural feature · `EST` estate/plot · `PROP` property description · `LEG` legal clause · `TRANS` transaction ·
-`TIM` time period · `DAT` calendar date · `MON` money · `TAX` toll/tribute · `COM` goods/animals · `NUM` number ·
-`MEA` measurement · `RELIC` sacred object.
+The 19 entity types, grouped into the four documentary layers of the annotation scheme. The English descriptions are the label prompts used by the model (*semantic scaffolding*, see the paper); they are also available as `ner.label_descriptions`.
 
-The full label descriptions used as prompts are in `ner.label_descriptions` (and in the paper's Appendix A).
+| Label | Layer | Description (prompt given to the model) |
+|---|---|---|
+| `PER` | persons and roles | individual person name without any titles or roles, strictly the given name or family name |
+| `ACTOR` | persons and roles | full noun phrase referring to a person including their name plus noble title, profession, geographic origin, or social status |
+| `TITLE` | persons and roles | social rank, noble title, ecclesiastical office, profession, or papal rank such as comes, abbas, episcopus |
+| `REL` | persons and roles | word or phrase indicating family, kinship, marriage, or social relationship like filius, uxor, frater |
+| `LOC` | places and landscape | geographical place, settlement, city, diocese, region, or named territory |
+| `INS` | places and landscape | monastery, abbey, church, cell, or religious order functioning as a corporate and legal body |
+| `NAT` | places and landscape | natural landscape feature such as a river, stream, forest, mountain, or valley |
+| `EST` | property and legal content | short physical plot of land, estate, farm, meadows, woods, vineyards, or courtyards |
+| `PROP` | property and legal content | detailed boundary description of a property, grange, estate, or island including past owners, movables, and immovables |
+| `LEG` | property and legal content | legal clause declaring rights, conditions, penalties, permissions, or papal commands |
+| `TRANS` | property and legal content | verb or phrase denoting a core transaction, confirmation, transfer, sale, gift, or donation |
+| `TIM` | time and value | time period, duration, general dating formula, indiction, or papal/royal regnal year |
+| `DAT` | time and value | specific calendar date, precise year of incarnation often starting with Anno or Datum, or named liturgical feast day |
+| `MON` | time and value | money, currency, coin, or monetary value such as libra, solidus, denarius, uncia, or marca |
+| `TAX` | time and value | customary toll, legal tax, tithe, exaction, lucrum camere, or tribute paid to an authority |
+| `COM` | time and value | harvested crops, food, physical goods, salt, wine, wax, gold, wood, or animals traded or given |
+| `NUM` | time and value | number written as a word or roman numeral, including fractions and quantities |
+| `MEA` | time and value | unit of measurement for land, volume, or weight such as mansus, carratas, aratrum, or talentum |
+| `RELIC` | time and value | holy relic, cross, altar, or sacred object of veneration within a church |
 
 ## How it works
 
